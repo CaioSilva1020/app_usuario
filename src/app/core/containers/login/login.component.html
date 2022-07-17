@@ -1,0 +1,61 @@
+<div class="login-box" >
+  <div class="background"></div>
+  <div class="login-box__in" >
+    <div class="row">
+      <div class="col-md-6">
+        <div class="content-position">
+          <div class="position-topo">
+            <div class="subtitulo">
+              <p>Bem-vindo ao <br /> AppUser</p>
+            </div>
+          </div>
+          <br />
+          <form (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+              <label for="username">Login</label>
+
+              <input type="text" name="Login" formControlName="username" class="form-control"
+                     placeholder="Informe seu login" [(ngModel)]="nomeUsuario" />
+              <!--<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">
+                  Usuário é requerido
+                </div>
+              </div>-->
+              <!--<div *ngIf="errorCpf">
+                <small style="color: red;">{{errorCpf}}</small>
+              </div>-->
+
+              <!--{{isCpf ? inputcpfMask : isCnpj ? inputCnpjMask : 'RESETADO'}}-->
+
+            </div>
+            <div class="form-group">
+              <label for="password">Senha</label>
+              <input type="password" formControlName="password" class="form-control"
+                     [(ngModel)]="senha" />
+              <!--<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">
+                  Senha é requerida
+                </div>
+              </div>-->
+            </div>
+            <div class="login-box__esqueci">
+              <!--<a href="/esqueci-a-senha">Esqueceu a senha?</a>-->
+            </div>
+            <br />
+            <div class="form-group">
+              <button class="btn btn-primary">
+                ACESSAR
+              </button><br />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="background-direita">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

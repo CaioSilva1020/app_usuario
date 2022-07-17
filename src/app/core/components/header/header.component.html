@@ -1,0 +1,30 @@
+
+<input class="sp_push_custom_data" type="hidden" name="DescLogin" value="{{DescLogin}}">
+
+<section style="font-size:14px">
+  <!--DescLogin: {{DescLogin}}-->
+  <p-toast [style]="{marginTop: '80px'}" position="top-right" key="toastMensagem"></p-toast>
+  <p-confirmDialog #cd header="Confirmação" icon="pi pi-exclamation-triangle">
+    <p-footer>
+      <button type="button" pButton icon="pi pi-times" label="Não" (click)="cd.reject()"></button>
+      <button type="button" pButton icon="pi pi-check" label="Sim" (click)="cd.accept()"></button>
+    </p-footer>
+  </p-confirmDialog>
+
+  <header>
+    <div class="modo-gerenciador-header ng-scope">
+      <span class="botao-sair"
+            (click)="fecharModo()"
+            style="cursor: pointer">
+        Sair <i class="fa fa-window-close"></i>
+      </span>
+    </div>
+    <div id="topo" [class.top-35]="mostrarModo">
+      teste
+    </div>
+
+  </header>
+
+  
+</section>
+

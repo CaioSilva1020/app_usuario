@@ -1,0 +1,52 @@
+footer {
+  background-color: #4c46c6;
+  height: 90px;
+  .logo
+
+{
+  background-repeat: no-repeat;
+  height: 27px;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.position {
+  text-align: center;
+  width: 100%;
+  margin-top: -90px;
+  .text-copyright
+
+{
+  color: white;
+}
+
+}
+
+&.footerLogin {
+  background-color: #eeeeee;
+  .logo
+
+{
+  background-repeat: no-repeat;
+  height: 27px;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.position {
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+  margin-top: -90px;
+  .text-copyright
+
+{
+  color: #757f8c !important;
+}
+
+}
+}
+}
