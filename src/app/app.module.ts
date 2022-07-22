@@ -1,9 +1,12 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
+import { LoginService } from './service/login.service';
 import { UsuariosModule } from './usuarios/usuarios.module';
 
 @NgModule({
@@ -15,9 +18,14 @@ import { UsuariosModule } from './usuarios/usuarios.module';
     CoreModule,
     HomeModule,
     UsuariosModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,11 +1,3 @@
-@import "../../../../assets/css/variaveis";
-
-.desktop-only {
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
 @media print {
   section {
     display: none !important;
@@ -596,11 +588,6 @@
 {
   display: block;
   float: right;
-}
-
-// .open-usuario {
-  // display: none;
-  //
 }
 
 }

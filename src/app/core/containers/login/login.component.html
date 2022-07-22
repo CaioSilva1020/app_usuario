@@ -10,41 +10,43 @@
             </div>
           </div>
           <br />
-          <form (ngSubmit)="onSubmit()">
+          <form (ngSubmit)="onSubmit(login)">
 
             <div class="form-group">
               <label for="username">Login</label>
-
-              <input type="text" name="Login" formControlName="username" class="form-control"
-                     placeholder="Informe seu login" [(ngModel)]="nomeUsuario" />
+              <input type="text" name="Login" class="form-control"
+                     placeholder="Informe seu login" [(ngModel)]="login.Email" />
+              <!--<input type="text" name="Login" formControlName="username" class="form-control"
+                     placeholder="Informe seu login" [(ngModel)]="login.Email" />-->
               <!--<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-                <div *ngIf="f.username.errors.required">
-                  Usuário é requerido
-                </div>
-              </div>-->
+    <div *ngIf="f.username.errors.required">
+      Usuário é requerido
+    </div>
+  </div>-->
               <!--<div *ngIf="errorCpf">
-                <small style="color: red;">{{errorCpf}}</small>
-              </div>-->
-
+    <small style="color: red;">{{errorCpf}}</small>
+  </div>-->
               <!--{{isCpf ? inputcpfMask : isCnpj ? inputCnpjMask : 'RESETADO'}}-->
 
             </div>
             <div class="form-group">
               <label for="password">Senha</label>
-              <input type="password" formControlName="password" class="form-control"
-                     [(ngModel)]="senha" />
+              <input type="password" name="Senha" class="form-control"
+                     placeholder="Informe sua senha" [(ngModel)]="login.Password" />
+              <!--<input type="password" formControlName="password" class="form-control"
+         [(ngModel)]="login.Password" />-->
               <!--<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                <div *ngIf="f.password.errors.required">
-                  Senha é requerida
-                </div>
-              </div>-->
+    <div *ngIf="f.password.errors.required">
+      Senha é requerida
+    </div>
+  </div>-->
             </div>
             <div class="login-box__esqueci">
               <!--<a href="/esqueci-a-senha">Esqueceu a senha?</a>-->
             </div>
             <br />
             <div class="form-group">
-              <button class="btn btn-primary">
+              <button class="btn btn-primary" (click)="onSubmit(login)">
                 ACESSAR
               </button><br />
             </div>

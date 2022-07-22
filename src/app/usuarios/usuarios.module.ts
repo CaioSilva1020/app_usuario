@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -9,7 +12,11 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
     UsuariosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ]
 })
 export class UsuariosModule { }
