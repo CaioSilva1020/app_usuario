@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\core\\containers",
+    "\\src\\app\\core\\containers\\login",
+    "\\src\\app\\entidades",
+    "\\src\\app\\service"
+  ],
+  "SelectedNode": "\\src\\app\\app.module.ts",
+  "PreviewInSolutionExplorer": false
+}
