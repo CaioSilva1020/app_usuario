@@ -1,7 +1,56 @@
-<p>Lista de usuários</p>
-<ul>
-  <li *ngFor="let item of listaUsuarios">
-    <span>Nome: {{item.nome}}</span>
-    <span>Nome: {{item.cpf}}</span>
-  </li>
-</ul>
+
+<div class="form-group" *ngIf="!boolAdicionar && !abreDetalhe">
+  <button  class="btn btn-primary" (click)="abrirAdicionar()">
+    Adicionar
+  </button><br />
+</div>
+
+<div *ngIf="!boolAdicionar && !abreDetalhe">
+  <p>Lista de usuários</p>
+  <ul>
+    <li *ngFor="let item of listaUsuarios">
+      <span>Nome: {{item.nome}} </span>
+      <span>CPF: {{item.cpf}} </span>
+    </li>
+  </ul>
+</div>
+
+<div class="form-group" *ngIf="boolAdicionar  && !abreDetalhe">
+  <label for="Nome">Nome</label>
+  <input type="text" name="Nome" class="form-control"
+         placeholder="Informe o nome" [(ngModel)]="usuario.Nome" />
+  <br />
+  <label for="Cpf">Cpf</label>
+  <input type="text" name="Cpf" class="form-control"
+         placeholder="Informe o cpf" [(ngModel)]="usuario.Cpf" />
+  <br />
+  <label for="Rg">Rg</label>
+  <input type="text" name="Rg" class="form-control"
+         placeholder="Informe o Rg" [(ngModel)]="usuario.Rg" />
+  <br />
+  <label for="DataNascimento">DataNascimento</label>
+  <input type="date" name="DataNascimento" class="form-control"
+         [(ngModel)]="usuario.DataNascimento" />
+  <br />
+  <button class="btn btn-primary" (click)="salvarUsuario()">
+    Salvar
+  </button>
+</div>
+
+<div class="form-group" *ngIf="!boolAdicionar  && abreDetalhe">
+  <label for="Nome">Nome: </label>
+  <span>{{usuario.Nome}}</span>
+  <br />
+  <label for="Cpf">Cpf: </label>
+  <span>{{usuario.Cpf}}</span>
+  <br />
+  <label for="Rg">Rg: </label>
+  <span>{{usuario.Rg}}</span>
+  <br />
+  <label for="DataNascimento">DataNascimento: </label>
+  <span>{{usuario.DataNascimento}}</span>
+  <br />
+  <button class="btn btn-primary" (click)="abrirLista()">
+    Listar
+  </button>
+</div>
