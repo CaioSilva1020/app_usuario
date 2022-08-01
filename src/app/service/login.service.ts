@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class LoginService {
     //console.log(environment.apiAuthUrl + 'v1/Autenticacao/Logar');
     this.headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     var header = this.headers;
-    return this.http.post('https://localhost:7174/api/Autoriza/login', login, { headers: header }).toPromise();
+    return this.http.post(environment.apiAuthUrl + 'api/Autenticacao/Logar', login, { headers: header }).toPromise();
     //return this.global.post(login,'https://localhost:7174/api/Autoriza/login', carregarLoading, retornarObjeto, logado, exibirMsg);
   }
 

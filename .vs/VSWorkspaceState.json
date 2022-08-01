@@ -3,8 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\entidades",
-    "\\src\\app\\service"
+    "\\src\\app\\core",
+    "\\src\\app\\core\\containers",
+    "\\src\\app\\core\\containers\\login",
+    "\\src\\app\\service",
+    "\\src\\app\\usuarios",
+    "\\src\\app\\usuarios\\usuarios",
+    "\\src\\environments"
   ],
+  "SelectedNode": "\\src\\app\\usuarios\\usuarios\\usuarios.component.ts",
   "PreviewInSolutionExplorer": false
 }

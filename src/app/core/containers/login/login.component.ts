@@ -22,8 +22,9 @@ export class LoginComponent implements OnInit {
 
   onSubmit(log: any): void {
     //var json = JSON.stringify(login);
+    this.login.Email = this.login.LoginNome;
     this.loginService.logar(this.login).then(retorno => {
-      var token = retorno['token'];
+      var token = retorno['token'].access_token;
       localStorage.setItem('Token', token);
       this.router.navigate(['/home']);
     });

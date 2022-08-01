@@ -4,13 +4,12 @@ export class Usuario {
   Nome: string;
   Cpf: string;
   Rg: string;
-  DataNascimento: Date;
+  DataNascimento?: string;
 
 
   constructor() {
     this.Nome = '';
     this.Cpf = '';
     this.Rg = '';
-    this.DataNascimento = new Date();
   }
 }
